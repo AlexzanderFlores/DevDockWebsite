@@ -1,0 +1,22 @@
+.team-member {
+  text-align: center;
+}
+
+.member-name {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.member-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #757b88;
+  margin-bottom: 10px;
+}
+
+.member-image img {
+  width: 90px;
+}

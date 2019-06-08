@@ -1,0 +1,20 @@
+#solutions .section-item {
+  max-width: 360px;
+}
+
+.service-title {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50px auto;
+  grid-column-gap: 13px;
+  margin-bottom: 11px;
+  font-family: Merriweather;
+}
+
+.service-image {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 47px;
+  width: 47px;
+}

@@ -1,0 +1,33 @@
+footer {
+  height: 73px;
+  padding: 25px 135px;
+  color: #fbfbfb;
+  background-color: #2c3953;
+}
+
+footer ul {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, auto);
+  width: 235px;
+}
+
+#footer-title {
+  margin-right: 29px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#footer-copyright {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 860px) {
+  footer {
+    padding: 25px 20px;
+  }
+
+  footer ul {
+    margin: 0 auto;
+  }
+}

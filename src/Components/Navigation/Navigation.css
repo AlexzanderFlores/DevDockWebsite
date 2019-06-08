@@ -1,0 +1,144 @@
+header {
+  height: 564px;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(4, 50, 172, 0.57),
+      rgba(8, 98, 120, 0.27)
+    ),
+    url('../../media/website-design-and-development.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  position: relative;
+  padding: 32px 135px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1fr;
+  grid-template-areas: 'left-nav right-nav';
+}
+
+nav li {
+  cursor: pointer;
+  padding: 7px 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+
+nav li:hover {
+  border-bottom: 3px solid #0058ff;
+  font-weight: 700;
+}
+
+#left-nav {
+  justify-self: start;
+  font-size: 18px;
+  grid-area: left-nav;
+}
+
+#right-nav {
+  display: flex;
+  justify-self: end;
+  font-size: 14px;
+  grid-area: right-nav;
+}
+
+header #welcome-text {
+  margin-top: 36px;
+  text-align: center;
+}
+
+#welcome-text h1 {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+#welcome-text h2 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+
+#drop-down-menu {
+  display: none;
+  grid-area: drop-down-menu;
+}
+
+@media screen and (min-width: 861px) {
+  #right-nav {
+    min-width: 400px;
+  }
+
+  #right-nav li:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 52px auto;
+    grid-template-areas:
+      'left-nav drop-down-menu'
+      'right-nav right-nav';
+    padding: 32px 20px;
+  }
+
+  #left-nav,
+  #drop-down-menu {
+    align-self: start;
+  }
+
+  #right-nav {
+    display: grid;
+    position: relative;
+    overflow-y: hidden;
+    transition-duration: 0.5s;
+    width: 100%;
+  }
+
+  #drop-down-menu {
+    position: relative;
+    display: grid;
+    justify-self: end;
+    height: 25px;
+    width: 29px;
+    padding: 18px 20px;
+    cursor: pointer;
+  }
+
+  #drop-down-menu span {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 22px;
+    background: #fff;
+    border-radius: 1px;
+    transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+  }
+
+  #drop-down-menu span:nth-child(1) {
+    top: 29%;
+  }
+
+  #drop-down-menu span:nth-child(2) {
+    top: 49%;
+  }
+
+  #drop-down-menu span:nth-child(3) {
+    top: 69%;
+  }
+
+  #drop-down-menu.close span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 49%;
+  }
+
+  #drop-down-menu.close span:nth-child(2),
+  #drop-down-menu.close span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 49%;
+  }
+}
